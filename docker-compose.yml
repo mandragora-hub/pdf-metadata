@@ -1,0 +1,8 @@
+services:
+  pdf-metadata:
+    build: .
+    container_name: pdf-metadata
+    environment:
+      - LITTERARUM_BASEURL=${LITTERARUM_BASEURL}
+      - LITTERARUM_TOKEN_API=${LITTERARUM_TOKEN_API}
+    network_mode: "host"
