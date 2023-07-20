@@ -4,10 +4,9 @@
   "description": "Extract read time, pages and metadata of pdf files in litterarum server.",
   "author": "mandragora-hub <royer01gomez@gmail.com>",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node --max-old-space-size=8192 .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "jest"
   },
   "license": "ISC",
   "dependencies": {
@@ -15,5 +14,10 @@
     "pdf-lib": "^1.17.1",
     "pdfreader": "^3.0.0",
     "reading-time": "^1.5.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.6.1",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
   }
 }
