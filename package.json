@@ -14,7 +14,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.3",
     "pdf-lib": "^1.17.1",
     "pdfreader": "^3.0.0",
     "reading-time": "^1.5.0"
