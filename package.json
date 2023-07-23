@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Extract read time, pages and metadata of pdf files in litterarum server.",
   "author": "mandragora-hub <royer01gomez@gmail.com>",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write ."
   },
   "license": "ISC",
   "dependencies": {
@@ -17,6 +20,14 @@
   },
   "devDependencies": {
     "@jest/globals": "^29.6.1",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard-with-typescript": "^37.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "3.0.0",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
   }
