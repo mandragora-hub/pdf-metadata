@@ -1,11 +1,12 @@
 {
   "name": "pdf-metadata",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Extract read time, pages and metadata of pdf files in litterarum server.",
   "author": "mandragora-hub <royer01gomez@gmail.com>",
   "main": "dist/src/index.js",
   "scripts": {
-    "build": "tsc",
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc",
     "test": "jest",
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix",
@@ -15,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "pdf-lib": "^1.17.1",
-    "pdfreader": "^3.0.0",
+    "pdfjs-dist": "^3.8.162",
     "reading-time": "^1.5.0"
   },
   "devDependencies": {
@@ -30,6 +31,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "prettier": "3.0.0",
+    "rimraf": "^5.0.1",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
   }
