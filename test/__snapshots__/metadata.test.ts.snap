@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Get info of module Load and get info document 1`] = `
+{
+  "metadata": {
+    "author": undefined,
+    "creationDate": 2017-11-25T15:43:31.000Z,
+    "creator": undefined,
+    "keywords": undefined,
+    "modificationDate": undefined,
+    "producer": "PDF-XChange Printer 2012 ABBYY (5.5 build 308.2) [Windows 8 x64 (Build 9200)]",
+    "subject": undefined,
+    "title": undefined,
+  },
+  "pages": 225,
+  "readTime": 20326200,
+  "wordCount": 67754,
+}
+`;
