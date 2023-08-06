@@ -1,6 +1,6 @@
 {
   "name": "pdf-metadata",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Extract read time, pages and metadata of pdf files in litterarum server.",
   "author": "mandragora-hub <royer01gomez@gmail.com>",
   "main": "dist/src/index.js",
