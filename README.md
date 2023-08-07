@@ -1,29 +1,22 @@
 # pdf-metadata
 
-Script that fills with PDF metadata, pages and read time attribute the database of Litterarum.
+Extract metadata, pages and read time from pdf file.
 
-For some reason this script uses a lot memory heap when. if we use the default Node memory it could return an error when process a large file, for example a file with many words. We solve this problem by running node with the next options: `--max-old-space-size=8192`.
-
-## Local Variables
-
-See the env example file.
-
-## Running in local environment
+## Install
 
 ```bash
-#Install the dependencies
-npm i 
-
-# Start the script
-npm start
+npm install pdf-metadata
 ```
 
-## Running with docker
+## Example usage
 
-```bash
-# Build image 
-docker compose build
+typescript async with pdf file in a server
 
-# Running 
-docker compose up
+```typescript
+import { loadDocument } from 'pdf-metadata';
+
+const fileUrl = 'https://litterarum.onrender.com/api/v1/files/las-mil-y-una-noches.pdf'
+const document = await loadDocument(fileUrl);
+const info = await document.getInfo();
+console.log(info) // Here we got metadata
 ```
