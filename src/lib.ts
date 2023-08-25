@@ -1,7 +1,10 @@
 import { PDFDocument } from "pdf-lib";
-import { getDocument } from "pdfjs-dist/legacy/build/pdf.js";
+import { GlobalWorkerOptions, getDocument } from "pdfjs-dist/legacy/build/pdf.js";
+import workerSrc from "pdfjs-dist/build/pdf.worker.js";
 import type { PDFMetadata } from "../types";
 import fs from "fs/promises";
+
+GlobalWorkerOptions.workerSrc = workerSrc;
 
 export async function getRawTextContent(pdfBuffer: ArrayBuffer) {
   const loadingTask = getDocument(pdfBuffer);
