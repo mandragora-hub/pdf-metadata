@@ -1,5 +1,5 @@
 import readingTime from "reading-time";
-import { getRawTextContent, getMetadataAndPages, fetchData, readFile } from "./lib";
+import { getRawTextContent, getMetadataAndPages, fetchData, readFile, setGlobalWorkerOptions } from "./lib";
 import { isArrayBuffer, isValidFetchUrl, isValidUrl, fileExists } from "./shared";
 
 class Document {
@@ -42,3 +42,5 @@ export async function loadDocument(src: string | URL | ArrayBuffer) {
 
   throw new Error("Invalid parameter in getDocument, need parameter object.");
 }
+
+export { setGlobalWorkerOptions };

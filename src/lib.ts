@@ -1,10 +1,13 @@
 import { PDFDocument } from "pdf-lib";
+import type { GlobalWorkerOptionsType } from "pdfjs-dist/types/src/display/worker_options";
 import { GlobalWorkerOptions, getDocument } from "pdfjs-dist/legacy/build/pdf.js";
-import workerSrc from "pdfjs-dist/build/pdf.worker.js";
 import type { PDFMetadata } from "../types";
 import fs from "fs/promises";
 
-GlobalWorkerOptions.workerSrc = workerSrc;
+export function setGlobalWorkerOptions(options: GlobalWorkerOptionsType) {
+  GlobalWorkerOptions.workerSrc = options.workerSrc;
+  if (options.workerPort != null) GlobalWorkerOptions.workerPort = options.workerPort;
+}
 
 export async function getRawTextContent(pdfBuffer: ArrayBuffer) {
   const loadingTask = getDocument(pdfBuffer);
