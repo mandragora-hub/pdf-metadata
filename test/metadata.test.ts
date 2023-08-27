@@ -1,5 +1,5 @@
 import { describe, expect, test } from "@jest/globals";
-import { loadDocument } from "../src/index";
+import { extractMetadataAndPages } from "../src/index";
 
 const MAX_TIMEOUT = 40000;
 
@@ -8,9 +8,8 @@ describe("Get info of module", () => {
     "Load and get info document",
     async () => {
       const url = "https://litterarum.onrender.com/api/v1/files/el-hombre-que-calculaba-malba-tahan.pdf";
-      const doc = await loadDocument(url);
-      const info = await doc.getInfo();
-      expect(info).toMatchSnapshot();
+      const result = await extractMetadataAndPages(url);
+      expect(result).toMatchSnapshot();
     },
     MAX_TIMEOUT,
   );

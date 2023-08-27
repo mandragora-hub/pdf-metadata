@@ -13,10 +13,10 @@ npm install pdf-metadata
 typescript async with pdf file in a server
 
 ```typescript
-import { loadDocument } from 'pdf-metadata';
+import { extractMetadataAndPages } from 'pdf-metadata';
 
 const fileUrl = 'https://litterarum.onrender.com/api/v1/files/las-mil-y-una-noches.pdf'
-const document = await loadDocument(fileUrl);
-const info = await document.getInfo();
+const info = await extractMetadataAndPages(fileUrl);
 console.log(info) // Here we got metadata
 ```
+
